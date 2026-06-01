@@ -1,0 +1,14 @@
+__pycache__/
+.mypy_cache/
+.env
+
+# Local scratch notes
+comparison.txt
+
+# Raw benchmark logs (keep only parsed JSON results)
+results/**/*.raw.log
+
+# Build artifacts — ignore everything except the committed SVG charts
+artifacts/*
+!artifacts/charts/
+

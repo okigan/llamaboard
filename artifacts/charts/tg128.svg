@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="220" font-family="monospace" font-size="12">
+<rect width="820" height="220" fill="#0d1117"/>
+<text x="410" y="24" text-anchor="middle" fill="#e6edf3" font-size="16" font-weight="bold">tg128 — tokens/sec (higher is better)</text>
+<text x="372" y="58" text-anchor="end" fill="#8b949e" font-size="11">HUANANZHI X99-BD4</text>
+<text x="372" y="71" text-anchor="end" fill="#6e7681" font-size="10">Tesla V100-SXM2-32GB</text>
+<text x="372" y="84" text-anchor="end" fill="#58a6ff" font-size="10" font-weight="bold">GPU</text>
+<rect x="380" y="54" width="400" height="24" fill="#58a6ff" rx="3"/>
+<text x="786" y="70" fill="#e6edf3" font-size="12">156.3</text>
+<text x="372" y="98" text-anchor="end" fill="#8b949e" font-size="11">GIGABYTE MC62-G40-00</text>
+<text x="372" y="111" text-anchor="end" fill="#6e7681" font-size="10">Tesla V100-SXM2-32GB</text>
+<text x="372" y="124" text-anchor="end" fill="#58a6ff" font-size="10" font-weight="bold">GPU</text>
+<rect x="380" y="94" width="396" height="24" fill="#58a6ff" rx="3"/>
+<text x="782" y="110" fill="#e6edf3" font-size="12">154.9</text>
+<text x="372" y="138" text-anchor="end" fill="#8b949e" font-size="11">HUANANZHI X99-BD4</text>
+<text x="372" y="151" text-anchor="end" fill="#6e7681" font-size="10">Intel(R) Xeon(R) CPU E5-2696 v4</text>
+<text x="372" y="164" text-anchor="end" fill="#3fb950" font-size="10" font-weight="bold">CPU</text>
+<rect x="380" y="134" width="33" height="24" fill="#3fb950" rx="3"/>
+<text x="419" y="150" fill="#e6edf3" font-size="12">13.1</text>
+<text x="372" y="178" text-anchor="end" fill="#8b949e" font-size="11">GIGABYTE MC62-G40-00</text>
+<text x="372" y="191" text-anchor="end" fill="#6e7681" font-size="10">AMD Ryzen Threadripper PRO 3955WX 16-Cores</text>
+<text x="372" y="204" text-anchor="end" fill="#3fb950" font-size="10" font-weight="bold">CPU</text>
+<rect x="380" y="174" width="31" height="24" fill="#3fb950" rx="3"/>
+<text x="417" y="190" fill="#e6edf3" font-size="12">12.1</text>
+<rect x="380" y="220" width="12" height="12" fill="#3fb950" rx="2"/>
+<text x="398" y="230" fill="#8b949e" font-size="11">CPU</text>
+<rect x="440" y="220" width="12" height="12" fill="#58a6ff" rx="2"/>
+<text x="458" y="230" fill="#8b949e" font-size="11">GPU</text>
+</svg>

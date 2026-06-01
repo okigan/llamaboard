@@ -1,0 +1,59 @@
+name: Generate Benchmark Charts
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "results/**/*.json"
+      - "scripts/generate_charts.py"
+      - ".github/workflows/charts.yml"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  charts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Generate Charts
+        run: |
+          uv run python scripts/generate_charts.py \
+            --results-root results \
+            --output artifacts
+
+      - name: Commit SVG charts to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add artifacts/charts/
+          if git diff --cached --quiet; then
+            echo "No chart changes to commit."
+          else
+            git commit -m "charts: update benchmark SVGs"
+            git push
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: artifacts/site
+
+  deploy-pages:
+    needs: charts
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

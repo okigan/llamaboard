@@ -1,0 +1,71 @@
+{
+  "schema_version": 4,
+  "run_timestamp_utc": "2026-06-01T02:01:30Z",
+  "host_sha256": "63fe870c4b4f75446bdf2bd6ae8d13af8be2235820ca27bf139118495e2289be",
+  "hardware": {
+    "motherboard": "GIGABYTE MC62-G40-00",
+    "cpu_model": "AMD Ryzen Threadripper PRO 3955WX 16-Cores",
+    "cpu_temp_c": null,
+    "gpu_model": "Tesla V100-SXM2-32GB",
+    "gpu_temp_c": 43.0
+  },
+  "benchmark": {
+    "model_ids": [
+      "ggml-org/Qwen3-4B-GGUF"
+    ],
+    "targets": [
+      "cpu",
+      "gpu0"
+    ]
+  },
+  "llama_cpp": {
+    "commit": "6f165c1c64f77024686dc969c3de6f030f274add"
+  },
+  "runs": [
+    {
+      "target": "cpu",
+      "model_id": "ggml-org/Qwen3-4B-GGUF",
+      "use_cuda": false,
+      "gpu": null,
+      "metrics": {
+        "pp": [
+          {
+            "tokens": 512,
+            "tokens_per_sec": 166.83
+          }
+        ],
+        "tg": [
+          {
+            "tokens": 128,
+            "tokens_per_sec": 12.13
+          }
+        ]
+      }
+    },
+    {
+      "target": "gpu0",
+      "model_id": "ggml-org/Qwen3-4B-GGUF",
+      "use_cuda": true,
+      "gpu": {
+        "model": "Tesla V100-SXM2-32GB",
+        "vram_mb": 32768.0,
+        "power_w": 26.09,
+        "temperature_c": 43.0
+      },
+      "metrics": {
+        "pp": [
+          {
+            "tokens": 512,
+            "tokens_per_sec": 5172.54
+          }
+        ],
+        "tg": [
+          {
+            "tokens": 128,
+            "tokens_per_sec": 154.95
+          }
+        ]
+      }
+    }
+  ]
+}
